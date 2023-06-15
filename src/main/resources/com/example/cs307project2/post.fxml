@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="500.0" prefWidth="377.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cs307project2.PostWindow">
+   <children>
+      <HBox alignment="CENTER" prefHeight="68.0" prefWidth="377.0">
+         <children>
+            <Label text="Title:" />
+            <TextField fx:id="title" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="68.0" prefWidth="377.0">
+         <children>
+            <Label text="Category:" />
+            <TextField fx:id="category" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="76.0" prefWidth="377.0">
+         <children>
+            <Label text="Country:" />
+            <TextField fx:id="country" prefHeight="23.0" prefWidth="120.0" />
+            <Label text="     City:" />
+            <TextField fx:id="city" prefHeight="23.0" prefWidth="147.0" />
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="171.0" prefWidth="377.0">
+         <children>
+            <Label text="Content:" />
+            <TextArea fx:id="content" prefHeight="147.0" prefWidth="314.0" wrapText="true" />
+         </children>
+      </HBox>
+      <HBox fx:id="hbox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" text="Add Image" onAction="#addImage"/>
+            <Button mnemonicParsing="false" onAction="#post" text="Post" />
+            <Button mnemonicParsing="false" onAction="#postAnonymously" text="Post Anonymously" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

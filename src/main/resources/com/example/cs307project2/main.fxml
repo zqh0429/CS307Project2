@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="500.0" prefWidth="542.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cs307project2.Main">
+   <children>
+      <MenuBar>
+        <menus>
+          <Menu mnemonicParsing="false" text="User">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openUserCenter" text="User Center" />
+                  <MenuItem mnemonicParsing="false" onAction="#changePassword" text="Change Password" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Search">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#searchAuthor" text="Author" />
+              <MenuItem mnemonicParsing="false" onAction="#searchContent" text="Content" />
+                  <MenuItem mnemonicParsing="false" onAction="#searchTitle" text="Title" />
+<!--                  <MenuItem mnemonicParsing="false" text="Time" onAction="#searchTime"/>-->
+                  <MenuItem mnemonicParsing="false" onAction="#searchCity" text="City" />
+                  <MenuItem mnemonicParsing="false" onAction="#searchCountry" text="Country" />
+                  <MenuItem mnemonicParsing="false" onAction="#searchTime" text="Time" />
+                  <MenuItem mnemonicParsing="false" onAction="#searchCategory" text="Category" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Rank">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#rankAll" text="All" />
+              <MenuItem mnemonicParsing="false" onAction="#rankCategory" text="Category" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <SplitPane dividerPositions="0.3409490333919156" prefHeight="502.0" prefWidth="382.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="497.0" prefWidth="92.0">
+               <children>
+                  <ListView fx:id="postList" layoutX="-1.0" layoutY="21.0" prefHeight="418.0" prefWidth="188.0" />
+                  <HBox layoutY="-1.0" prefHeight="23.0" prefWidth="181.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#search" prefHeight="23.0" prefWidth="37.0" text="🔍" />
+                        <TextField fx:id="search" />
+                     </children>
+                  </HBox>
+               </children></AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="497.0" prefWidth="249.0">
+               <children>
+                  <VBox prefHeight="437.0" prefWidth="352.0">
+                     <children>
+                        <HBox prefHeight="35.0" prefWidth="295.0">
+                           <children>
+                              <Label fx:id="postIDL" text="Post ID:" />
+                              <Label fx:id="postID" prefHeight="15.0" prefWidth="200.0" />
+                              <Label fx:id="hitLabel" text="🔥" />
+                              <Label fx:id="hitContentLabel" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="35.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="titleL" text="Title: " />
+                              <TextArea fx:id="title" disable="true" editable="false" prefHeight="38.0" prefWidth="316.0" wrapText="true" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="35.0" prefWidth="247.0">
+                           <children>
+                              <Label fx:id="categoryL" text="Category: " />
+                              <TextArea fx:id="category" disable="true" editable="false" prefHeight="38.0" prefWidth="288.0" wrapText="true" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="35.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="authorL" text="Author：" />
+                              <TextField fx:id="author" disable="true" editable="false" prefHeight="23.0" prefWidth="294.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="35.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="postingTime" text="Posting Time：" />
+                              <Label fx:id="postingTimeL" prefHeight="44.0" prefWidth="159.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="35.0" prefWidth="200.0">
+                           <children>
+                              <Label fx:id="postingCityL" text="Posting City：" />
+                              <Label fx:id="postingCity" prefHeight="37.0" prefWidth="163.0" />
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="119.0" prefWidth="352.0">
+                           <children>
+                              <Label fx:id="contentL" prefHeight="15.0" prefWidth="64.0" text="Content:" />
+                              <TextArea fx:id="content" editable="false" prefHeight="173.0" prefWidth="278.0" scrollTop="100.0" wrapText="true" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fx:id="imageView" fitHeight="110.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                           </children>
+                        </HBox>
+                        <Button mnemonicParsing="false" onAction="#reply" text="Reply" />
+                        <HBox prefHeight="31.0" prefWidth="352.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#like" text="❤">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font></Button>
+                              <Button mnemonicParsing="false" onAction="#favorite" text="★">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font></Button>
+                              <Button mnemonicParsing="false" onAction="#share" text="↪">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font></Button>
+                              <Button mnemonicParsing="false" onAction="#viewReply" text="💬">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="39.0" prefWidth="352.0">
+                           <children>
+                              <Button fx:id="follow" mnemonicParsing="false" onAction="#followAuthor" text="Follow the Author" />
+                              <Button fx:id="cancel" mnemonicParsing="false" onAction="#cancelFollowing" text="Cancel Following" />
+                              <Button mnemonicParsing="false" text="🚫" onAction="#block"/>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#refresh" text="⟳">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button mnemonicParsing="false" onAction="#post" text="Post">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#delete" prefHeight="29.0" prefWidth="72.0" text="Delete">
+               <font>
+                  <Font size="14.0" />
+               </font></Button>
+         </children>
+      </HBox>
+   </children>
+</VBox>

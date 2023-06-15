@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="BOTTOM_CENTER" prefHeight="189.0" prefWidth="303.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cs307project2.HelloController">
+  <HBox alignment="CENTER" prefHeight="80.0" prefWidth="303.0">
+    <Label fx:id="label1" prefHeight="31.0" prefWidth="71.0" text="Username: " HBox.hgrow="ALWAYS" />
+      <TextField fx:id="usernameText" prefHeight="24.0" prefWidth="161.0" />
+  </HBox>
+  <HBox alignment="CENTER" prefHeight="52.0" prefWidth="303.0">
+    <Label fx:id="label2" text="Password:    " />
+    <TextField fx:id="passwordText" prefHeight="23.0" prefWidth="161.0" />
+  </HBox>
+  <HBox alignment="TOP_CENTER" prefHeight="57.0" prefWidth="303.0">
+    <Button fx:id="loginButton" mnemonicParsing="false" onAction="#login" prefWidth="57.0" text="Login" />
+    <Button mnemonicParsing="false" onAction="#register" text="Register" />
+  </HBox>
+   <HBox alignment="CENTER" prefHeight="73.0" prefWidth="303.0">
+      <children>
+         <Button mnemonicParsing="false" text="🔧" onAction="#loginManager"/>
+      </children></HBox>
+</VBox>
